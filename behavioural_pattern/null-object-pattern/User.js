@@ -1,28 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
-var User = /** @class */ (function () {
-    function User(firstName, lastName, age, address) {
+class User {
+    constructor(firstName, lastName, age, address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.address = address;
     }
-    User.prototype.getFirstName = function () {
+    getFirstName() {
         return this.firstName;
-    };
-    User.prototype.getLastName = function () {
+    }
+    getLastName() {
         return this.lastName;
-    };
-    User.prototype.getAge = function () {
+    }
+    getAge() {
         return this.age;
-    };
-    User.prototype.getAddress = function () {
+    }
+    getAddress() {
         return this.address.getAddress();
-    };
-    User.prototype.print = function () {
-        console.log("Hello, my name is ".concat(this.firstName, " ").concat(this.lastName, ", I am ").concat(this.age, " years old and I live in ").concat(this.address.getAddress()));
-    };
-    return User;
-}());
+    }
+    print() {
+        console.log(`Hello, my name is ${this.firstName} ${this.lastName}, I am ${this.age} years old and I live in ${this.address.getAddress()}`);
+    }
+}
 exports.User = User;
