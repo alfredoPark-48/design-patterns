@@ -1,29 +1,28 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NullUser = void 0;
-var NullAddress_1 = require("./NullAddress");
-var NullUser = /** @class */ (function () {
-    function NullUser() {
+const NullAddress_1 = require("./NullAddress");
+class NullUser {
+    constructor() {
         this.firstName = '';
         this.lastName = '';
         this.age = -1;
         this.address = new NullAddress_1.NullAddress();
     }
-    NullUser.prototype.getFirstName = function () {
+    getFirstName() {
         return this.firstName;
-    };
-    NullUser.prototype.getLastName = function () {
+    }
+    getLastName() {
         return this.lastName;
-    };
-    NullUser.prototype.getAge = function () {
+    }
+    getAge() {
         return this.age;
-    };
-    NullUser.prototype.getAddress = function () {
+    }
+    getAddress() {
         return this.address.getAddress();
-    };
-    NullUser.prototype.print = function () {
-        console.log("Hello, my name is ".concat(this.firstName, " ").concat(this.lastName, ", I am ").concat(this.age, " years old and I live in ").concat(this.address.getAddress()));
-    };
-    return NullUser;
-}());
+    }
+    print() {
+        console.log(`Hello, my name is ${this.firstName} ${this.lastName}, I am ${this.age} years old and I live in ${this.address.getAddress()}`);
+    }
+}
 exports.NullUser = NullUser;

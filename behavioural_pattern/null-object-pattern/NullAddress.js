@@ -1,16 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NullAddress = void 0;
-var NullAddress = /** @class */ (function () {
-    function NullAddress() {
+class NullAddress {
+    constructor() {
         this.street = '';
         this.zip = '';
         this.streetNumber = '';
         this.address = '';
     }
-    NullAddress.prototype.getAddress = function () {
+    getAddress() {
         return 'no place';
-    };
-    return NullAddress;
-}());
+    }
+}
 exports.NullAddress = NullAddress;

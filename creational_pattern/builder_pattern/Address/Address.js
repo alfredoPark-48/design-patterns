@@ -2,14 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Address = void 0;
 class Address {
-    constructor(street, zip, streetNumber) {
-        this.street = street;
-        this.zip = zip;
+    constructor(streetName, streetNumber, zipCode) {
+        this.streetName = streetName;
         this.streetNumber = streetNumber;
-        this.address = `${this.street} ${this.streetNumber}, ${this.zip}`;
+        this.zipCode = zipCode;
     }
     getAddress() {
-        return this.address;
+        return `${this.streetNumber} ${this.streetName} ${this.zipCode}`;
     }
 }
 exports.Address = Address;
