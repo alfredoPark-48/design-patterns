@@ -3,9 +3,13 @@ export class Address {
     streetNumber: number
     zipCode: number
 
-    constructor() {
-        this.streetName = ''
-        this.streetNumber = -1
-        this.zipCode = -1
+    constructor(streetName: string, streetNumber: number, zipCode: number) {
+        this.streetName = streetName
+        this.streetNumber = streetNumber
+        this.zipCode = zipCode
+    }
+
+    getAddress(): string {
+        return `${this.streetNumber} ${this.streetName} ${this.zipCode}`
     }
 }

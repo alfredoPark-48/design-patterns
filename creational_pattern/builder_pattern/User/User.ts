@@ -6,16 +6,21 @@ export class User {
     age: number;
     address: Address;
 
-    constructor() {
-        this.firstName = "";
-        this.lastName = "";
-        this.age = -1;
-        this.address = new Address();
+    constructor(
+        firstName: string,
+        lastName: string,
+        age: number,
+        address: Address
+    ) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.address = address;
     }
 
     print(): void {
         console.log(
-            `${this.firstName} ${this.lastName}, aged ${this.age}, lives at ${this.address}`
+            `${this.firstName} ${this.lastName}, aged ${this.age}, lives at ${this.address.getAddress()}`
         );
     }
 }
