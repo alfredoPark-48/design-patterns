@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const MsiManufacturer_1 = require("./MsiManufacturer");
+const AsusManufacturer_1 = require("./AsusManufacturer");
+const msiManufacturer = new MsiManufacturer_1.MsiManufacturer();
+const asusManufacturer = new AsusManufacturer_1.AsusManufacturer();
+console.log(msiManufacturer.createGpu());
+console.log(asusManufacturer.createGpu());
+console.log(msiManufacturer.createMonitor());
+console.log(asusManufacturer.createMonitor());
